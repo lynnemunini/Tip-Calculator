@@ -4,6 +4,7 @@ WORKDIR /app
 
 # Copy source code to working directory
 COPY . flask_app/web.py /app/
+COPY . nlib /app/
 
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
