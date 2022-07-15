@@ -13,6 +13,7 @@ env:
 
 lint:
 	pylint --load-plugins pylint_flask --disable=R,C flask_app/*.py nlib csvcli
+	hadolint Dockerfile
 
 lint-circleci:                                                              
 	pylint --output-format=parseable --load-plugins pylint_flask --disable=R,C flask_app/*.py nlib csvcli > $$CIRCLE_ARTIFACTS/pylint.html  
